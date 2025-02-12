@@ -1,0 +1,506 @@
+.oxanium-unique {
+  font-family: "Oxanium", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Замініть на потрібну вагу (300, 400, 700 тощо) */
+  font-style: normal;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-background {
+  background: url("./images/120172-720504774.mp4") no-repeat center center fixed;
+  background-size: cover;
+}
+html,
+body {
+  height: 100%; /* Забезпечує, що сторінка займає всю висоту вікна браузера */
+  margin: 0; /* Вилучає відступи за замовчуванням */
+}
+
+/* Контентна частина сторінки */
+main {
+  flex: 1; /* Розтягує цю частину, щоб займати весь доступний простір */
+}
+html {
+  scroll-behavior: smooth; /* Увімкнення плавного скролінгу */
+}
+/* Заголовки */
+h1,
+h2,
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  color: #ffffff; /* Білий текст для контрасту з темним фоном */
+}
+
+/* Основний текст */
+body,
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #d1d1d1; /* Світло-сірий текст */
+}
+
+/* Акценти */
+button,
+.btn,
+.logo span {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Загальні стилі */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("./images/120172-720504774.mp4") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Хедер */
+.frosted-glass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent; /* Повністю прозорий фон */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+/* Лого і текст лого */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Прибираємо підкреслення */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img {
+  width: 80px; /* Розмір логотипу */
+  height: 80px;
+  border-radius: 50%; /* Робимо логотип круглим */
+  object-fit: cover;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анімація при наведенні */
+}
+
+.logo span {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  background: linear-gradient(90deg, #ff7eb3, #00bcd4, #a29bfe);
+  -webkit-background-clip: text; /* Для обтинання фону текстом */
+  -webkit-text-fill-color: transparent; /* Робимо текст прозорим */
+  animation: color-shift 3s infinite; /* Анімація переливання кольору */
+}
+
+/* Ефекти при наведенні */
+.logo:hover img {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Підсвічування логотипу */
+  transform: scale(1.1); /* Легка анімація збільшення */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Уповільнення анімації */
+}
+
+.logo:hover span {
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Уповільнення анімації */
+  transform: scale(1.1); /* Легка анімація тексту */
+}
+
+/* Анімація переливання кольору */
+@keyframes color-shift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Робимо логотип посиланням */
+.logo-link {
+  text-decoration: none; /* Прибираємо підкреслення для посилання */
+  display: inline-flex; /* Вирівнюємо логотип і текст разом */
+  align-items: center;
+}
+
+/* Вирівнювання навігації */
+nav {
+  display: flex;
+  gap: 1.5rem; /* Відступи між пунктами меню */
+}
+
+/* Перемикач мов */
+.language-switcher {
+  display: flex;
+  justify-content: flex-end; /* Вирівнювання перемикача праворуч */
+  gap: 0.5rem; /* Відступи між кнопками */
+}
+
+.language-switcher button {
+  width: 40px; /* Ширина кнопки */
+  height: 30px; /* Висота кнопки */
+  padding: 0;
+  font-size: 0;
+  /* padding: 0.5rem 1rem; */
+  border: none;
+  /* background: rgba(255, 255, 255, 0.2); */
+  color: #ad0cec;
+  /* font-size: 2rem; */
+  cursor: pointer;
+  border-radius: 5px;
+  /* transition: background 0.3s ease, background-image 0.3s ease; */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Прапори для кнопок */
+.language-switcher button[data-lang="pl"] {
+  background-image: url("./images/pl-flag.png"); /* Замініть на шлях до прапора Польщі */
+}
+
+.language-switcher button[data-lang="en"] {
+  background-image: url("./images/union-jack-updated.png"); /* Замініть на шлях до прапора Англії */
+}
+
+.language-switcher button[data-lang="ru"] {
+  background-image: url("./images/ru-flag.png"); /* Замініть на шлях до прапора Росії */
+}
+
+/* Ефект при наведенні */
+.language-switcher button:hover {
+  transform: scale(1.3); /* Легка анімація збільшення */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Уповільнення анімації */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Адаптація для планшетів */
+@media (max-width: 768px) {
+  nav {
+    gap: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Адаптація для телефонів */
+@media (max-width: 480px) {
+  /* Хедер */
+  header {
+    flex-direction: column; /* Елементи розташовуються вертикально */
+    align-items: center; /* Вирівнювання елементів по центру */
+    padding: 1rem; /* Зменшені відступи */
+  }
+
+  .logo img {
+    width: 60px; /* Зменшення логотипу */
+    height: 60px;
+  }
+
+  nav {
+    flex-direction: column; /* Пункти меню вертикальні */
+    align-items: center;
+    gap: 1rem; /* Відступ між пунктами меню */
+    margin-top: 1rem;
+  }
+
+  .language-switcher {
+    margin-top: 1rem; /* Відступ для перемикача мов */
+  }
+
+  /* Hero секція */
+  .hero {
+    text-align: center; /* Вирівнювання тексту по центру */
+    padding: 2rem 1rem; /* Зменшені відступи */
+  }
+
+  .hero h1 {
+    font-size: 1.8rem; /* Зменшений розмір заголовка */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Зменшений розмір тексту */
+  }
+
+  .hero .btn {
+    width: 100%; /* Кнопка займає всю ширину */
+    padding: 0.75rem 0; /* Зменшені відступи */
+  }
+
+  /* Footer */
+  footer {
+    padding: 1rem;
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-size: 0.9rem; /* Зменшений розмір тексту */
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff; /* Білий текст */
+  font-family: "Orbitron", sans-serif; /* Сучасний шрифт */
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.3); /* Легка анімація збільшення */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  color: #a6b0b1; /* Акцентний колір при наведенні */
+}
+
+/* Hero секція */
+.hero {
+  padding: 150px 2rem 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  /* margin: 0 auto;
+  text-align: left; */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #d1d1d1;
+}
+
+.hero .btn {
+  background: #4b0039; /* Спокійний зелений колір */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #1a004d; /* Темніший зелений при наведенні */
+}
+
+/* Features секція */
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 50px 2rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  /* padding: 20px; */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  max-width: 300px;
+  color: #ffffff;
+  min-height: 250px;
+}
+
+.feature img {
+  width: 80px; /* Розмір логотипу */
+  height: 80px;
+  border-radius: 50%; /* Робимо логотип круглим */
+  /* width: 60px; */
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #d1d1d1;
+}
+
+.feature .btn:hover {
+  background: #3e8e41;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff; /* Колір тексту */
+  text-align: center;
+  padding: 1rem; /* Внутрішні відступи */
+  font-size: 0.9rem;
+}
+/* Footer */
+
+/* Адаптація для планшетів */
+@media (max-width: 768px) {
+  nav {
+    gap: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Адаптація для телефонів */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .features {
+    padding: 1rem;
+  }
+
+  .feature {
+    padding: 0.5rem;
+  }
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Адаптивна сітка */
+  gap: 2rem; /* Відстань між елементами */
+  padding: 2rem; /* Внутрішні відступи секції */
+  border-radius: 10px; /* Заокруглені кути */
+  box-sizing: border-box;
+}
+
+.services-list .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для картки */
+  min-height: 250px;
+}
+
+.services-list .service img {
+  width: 80px; /* Розмір логотипу */
+  height: 80px;
+  border-radius: 50%; /* Робимо логотип круглим */
+  /* width: 60px; */
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.services-list .service h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.services-list .service p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  flex-grow: 1; /* Текст розтягується, якщо потрібно */
+}
+.about-company {
+  padding: 150px 2rem 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  /* margin: 0 auto;
+  text-align: left; */
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Центрування по вертикалі */
+  text-align: center;
+}
+
+.contact-info h1 {
+  font-size: 3rem; /* Великий розмір шрифту для заголовка */
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1.5rem; /* Збільшений розмір тексту */
+  margin: 0.5rem 0;
+}

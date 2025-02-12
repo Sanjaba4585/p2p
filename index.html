@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Візитка</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                el.textContent = el.dataset[language];
+            });
+        }
+    </script>
+</head>
+
+<body class="video-background">
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="./images/120172-720504774.mp4" type="video/mp4">
+            Ваш браузер не підтримує відео.
+        </video>
+    </div>
+    <header class="frosted-glass">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="./images/Logo new1.png" alt="Логотип">
+                <span data-lang data-pl="VERSA COMP" data-en="VERSA COMP" data-ru="VERSA COMP">VERSA COMP</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="services.html" data-lang data-pl="Usługi" data-en="Services" data-ru="Услуги">Usługi</a>
+            <a href="about.html" data-lang data-pl="O nas" data-en="About Us" data-ru="О нас">O nas</a>
+            <a href="contact.html" data-lang data-pl="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</a>
+        </nav>
+        <div class="language-switcher">
+            <button data-lang="pl" onclick="changeLanguage('pl')">PL</button>
+            <button data-lang="en" onclick="changeLanguage('en')">EN</button>
+            <button data-lang="ru" onclick="changeLanguage('ru')">RU</button>
+        </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 data-lang data-pl="Witamy w naszej firmie" data-en="Welcome to Our Company"
+                data-ru="Добро пожаловать в нашу компанию">Witamy w naszej firmie</h1>
+            <p data-lang
+                data-pl="Specjalizujemy się w handlu P2P na dużych platformach handlowych, zapewniając klientom wysoką jakość usług i szybkie transakcje. Jesteśmy ambitną firmą, która szybko się rozwija na rynku. Dla nas najważniejsze to bezpieczeństwo, uczciwość i szybkość."
+                data-en="We specialize in P2P trading on major trading platforms, providing clients with quality service and fast transactions. We are an ambitious company rapidly growing in the market. For us, safety, integrity, and speed are paramount."
+                data-ru="Мы специализируемся на P2P-торговле на крупных торговых площадках, предоставляя клиентам качественный сервис и быстрые транзакции. Мы амбициозная компания, которая быстро развивается на рынке. Для нас главное - это безопасность, порядочность и скорость.">
+                Specjalizujemy się w handlu P2P przez Binance i Bybit, zapewniając klientom wysoką jakość usług i
+                szybkie
+                transakcje. Jesteśmy ambitną firmą, która szybko się rozwija na rynku. Dla nas najważniejsze to
+                bezpieczeństwo,
+                uczciwość i szybkość.</p>
+            <a href="contact.html" class="btn" data-lang data-pl="Kontakt" data-en="Contact"
+                data-ru="Контакты">Kontakt</a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="./images/Team.webp" alt="Zespół">
+                <h3 data-lang data-pl="Nasz zespół" data-en="Our Team" data-ru="Наша команда">Nasz zespół</h3>
+                <p data-lang data-pl="Wykwalifikowani specjaliści, zawsze gotowi pomóc."
+                    data-en="Qualified specialists always ready to help."
+                    data-ru="Квалифицированные специалисты, всегда готовые помочь.">Wykwalifikowani specjaliści, zawsze
+                    gotowi
+                    pomóc.</p>
+
+            </div>
+            <div class="feature">
+                <img src="./images/Values.webp" alt="Wartości">
+                <h3 data-lang data-pl="Nasze wartości" data-en="Our Values" data-ru="Наши ценности">Nasze wartości</h3>
+                <p data-lang data-pl="Cenimy profesjonalizm, uczciwość i gotowość do współpracy."
+                    data-en="We value professionalism, honesty, and readiness to cooperate."
+                    data-ru="Мы ценим профессионализм, честность и готовность к сотрудничеству.">Cenimy profesjonalizm,
+                    uczciwość i gotowość do współpracy.</p>
+
+            </div>
+            <div class="feature">
+                <img src="./images/Strong.webp" alt="Mocne strony">
+                <h3 data-lang data-pl="Nasze mocne strony" data-en="Our Strengths" data-ru="Наши сильные стороны">Nasze
+                    mocne
+                    strony</h3>
+                <p data-lang data-pl="Gwarancja bezpieczeństwa i szybkości transakcji."
+                    data-en="Guarantee of safety and speed of transactions."
+                    data-ru="Гарантия безопасности и скорости транзакций.">Gwarancja bezpieczeństwa i szybkości
+                    transakcji.</p>
+
+            </div>
+            <div class="feature">
+                <img src="./images/Collaboration.webp" alt="Współpraca">
+                <h3 data-lang data-pl="Współpraca" data-en="Collaboration" data-ru="Сотрудничество">Współpraca</h3>
+                <p data-lang data-pl="Zawsze otwarci na nowych partnerów i klientów."
+                    data-en="Always open to new partners and clients."
+                    data-ru="Мы всегда открыты для новых партнеров и клиентов.">Zawsze otwarci na nowych partnerów i
+                    klientów.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang data-pl="&copy; 2025 VERSA COMP. Wszystkie prawa zastrzeżone."
+            data-en="&copy; 2025 VERSA COMP. All rights reserved."
+            data-ru="&copy; 2025 VERSA COMP. Все права защищены.">
+            &copy; 2025 VERSA COMP. Wszystkie prawa zastrzeżone.
+        </p>
+    </footer>
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                el.textContent = el.dataset[language];
+            });
+        }
+    </script>
+</head>
+
+<body class="video-background">
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="./images/120172-720504774.mp4" type="video/mp4">
+            Ваш браузер не підтримує відео.
+        </video>
+    </div>
+    <header class="frosted-glass">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="./images/Logo new1.png" alt="Логотип">
+                <span data-lang data-pl="VERSA COMP" data-en="VERSA COMP" data-ru="VERSA COMP">VERSA COMP</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="index.html" data-lang data-pl="Strona główna" data-en="Home" data-ru="Главная">Strona główna</a>
+            <a href="services.html" data-lang data-pl="Usługi" data-en="Services" data-ru="Услуги">Usługi</a>
+            <a href="about.html" data-lang data-pl="O nas" data-en="About Us" data-ru="О нас">O nas</a>
+            <a href="contact.html" data-lang data-pl="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</a>
+        </nav>
+        </nav>
+        <div class="language-switcher">
+            <button data-lang="pl" onclick="changeLanguage('pl')">PL</button>
+            <button data-lang="en" onclick="changeLanguage('en')">EN</button>
+            <button data-lang="ru" onclick="changeLanguage('ru')">RU</button>
+        </div>
+
+        </div>
+    </header>
+    <main>
+        <section class="about-company">
+            <h1 data-lang data-pl="O naszej firmie" data-en="About Our Company" data-ru="О нашей компании">O naszej
+                firmie
+            </h1>
+            <p data-lang
+                data-pl="Nasza firma to lider na rynku P2P, specjalizujący się w bezpiecznych i szybkich transakcjach kryptowalutowych. Naszą misją jest zapewnienie najwyższej jakości usług oraz budowanie długotrwałych relacji z naszymi klientami."
+                data-en="Our company is a leader in the P2P market, specializing in secure and fast cryptocurrency transactions. Our mission is to provide top-quality services and build long-term relationships with our clients."
+                data-ru="Наша компания является лидером на рынке P2P, специализируясь на безопасных и быстрых криптовалютных транзакциях. Наша миссия - предоставлять услуги высочайшего качества и строить долгосрочные отношения с клиентами.">
+                Nasza firma to lider na rynku P2P, specjalizujący się w bezpiecznych i szybkich transakcjach
+                kryptowalutowych. Naszą misją jest zapewnienie najwyższej jakości usług oraz budowanie długotrwałych
+                relacji
+                z naszymi klientami.
+            </p>
+        </section>
+
+        <section class="license-info">
+            <h2 data-lang data-pl="Nasza licencja" data-en="Our License" data-ru="Наша лицензия">Nasza licencja</h2>
+            <p data-lang
+                data-pl="Nasza działalność jest licencjonowana i regulowana przez odpowiednie organy, co gwarantuje najwyższy poziom bezpieczeństwa i zgodności z przepisami. Firma VERSA COMP sp. z o.o. jest zarejestrowana w Polsce (NIP: 7252349846, KRS: 0001140325). Posiadamy licencję na prowadzenie działalności w zakresie kupna i sprzedaży kryptowalut (Rejestr działalności w zakresie walut wirtualnych pod numerem RDWW – 1707): (a) wymiana między walutami wirtualnymi a środkami płatniczymi (b) wymiana między walutami wirtualnymi. Działalność firmy VERSA COMP sp. z o.o. jest regulowana i nadzorowana przez Polską Komisję Nadzoru Finansowego."
+                data-en="Our operations are licensed and regulated by the appropriate authorities, ensuring the highest level of security and compliance. VERSA COMP sp. z o.o. is registered in Poland (NIP: 7252349846, KRS: 0001140325). We have a license allowing us to operate in the field of cryptocurrency buying and selling (Register of Virtual Currency Activities under number RDWW – 1707): (a) exchange between virtual currencies and payment instruments (b) exchange between virtual currencies. The operations of VERSA COMP sp. z o.o. are regulated and supervised by the Polish Financial Supervision Authority."
+                data-ru="Наша деятельность лицензирована и регулируется соответствующими органами, что гарантирует высочайший уровень безопасности и соответствия требованиям. Компания VERSA COMP sp. z o.o. зарегистрирована в Польше (NIP: 7252349846, KRS: 0001140325). У нас есть лицензия, позволяющая нам вести деятельность в сфере покупки и продажи криптовалют (Реестр деятельности в сфере виртуальных валют под номером RDWW – 1707): (a) обмен между виртуальными валютами и платежными средствами (b) обмен между виртуальными валютами. Деятельность компании VERSA COMP sp. z o.o. регулируется и контролируется Польской службой финансового надзора.">
+                Nasza działalność jest licencjonowana i regulowana przez odpowiednie organy, co gwarantuje najwyższy
+                poziom
+                bezpieczeństwa i zgodności z przepisami. Firma VERSA COMP sp. z o.o. jest zarejestrowana w Polsce (NIP:
+                7252349846, KRS: 0001140325). Posiadamy licencję na prowadzenie działalności w zakresie kupna i
+                sprzedaży
+                kryptowalut (Rejestr działalności w zakresie walut wirtualnych pod numerem RDWW – 1707): (a) wymiana
+                między
+                walutami wirtualnymi a środkami płatniczymi (b) wymiana między walutami wirtualnymi. Działalność firmy
+                VERSA
+                COMP sp. z o.o. jest regulowana i nadzorowana przez Polską Komisję Nadzoru Finansowego.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang data-pl="&copy; 2025 VERSA COMP. Wszystkie prawa zastrzeżone."
+            data-en="&copy; 2025 VERSA COMP. All rights reserved."
+            data-ru="&copy; 2025 VERSA COMP. Все права защищены.">
+            &copy; 2025 VERSA COMP. Wszystkie prawa zastrzeżone.
+        </p>
+    </footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(el => {
+                el.textContent = el.dataset[language];
+            });
+        }
+    </script>
+</head>
+
+<body class="video-background">
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="./images/120172-720504774.mp4" type="video/mp4">
+            Ваш браузер не підтримує відео.
+        </video>
+    </div>
+    <header class="frosted-glass">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="./images/Logo new1.png" alt="Логотип">
+                <span data-lang data-pl="VERSA COMP" data-en="VERSA COMP" data-ru="VERSA COMP">VERSA COMP</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html" data-lang data-pl="Strona główna" data-en="Home" data-ru="Главная">Strona główna</a>
+            <a href="services.html" data-lang data-pl="Usługi" data-en="Services" data-ru="Услуги">Usługi</a>
+            <a href="about.html" data-lang data-pl="O nas" data-en="About Us" data-ru="О нас">O nas</a>
+            <a href="contact.html" data-lang data-pl="Kontakt" data-en="Contact" data-ru="Контакты">Kontakt</a>
+        </nav>
+        <div class="language-switcher">
+            <button data-lang="pl" onclick="changeLanguage('pl')">PL</button>
+            <button data-lang="en" onclick="changeLanguage('en')">EN</button>
+            <button data-lang="ru" onclick="changeLanguage('ru')">RU</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 data-lang data-pl="Nasze usługi" data-en="Our Services" data-ru="Наши услуги">Nasze usługi</h1>
+            <p data-lang
+                data-pl="Oferujemy szeroki zakres usług związanych z handlem P2P, w tym bezpieczne transakcje i profesjonalne doradztwo."
+                data-en="We offer a wide range of services related to P2P trading, including secure transactions and professional consulting."
+                data-ru="Мы предлагаем широкий спектр услуг, связанных с P2P-торговлей, включая безопасные сделки и профессиональные консультации.">
+                Oferujemy szeroki zakres usług związanych z handlem P2P, w tym bezpieczne transakcje i profesjonalne
+                doradztwo.
+            </p>
+        </section>
+
+        <section class="services-list">
+            <div class="service">
+                <img src="./images/Consulting.webp" alt="Consulting">
+                <h3 data-lang data-pl="Doradztwo" data-en="Consulting" data-ru="Консалтинг">Doradztwo</h3>
+                <p data-lang data-pl="Zapewniamy profesjonalne doradztwo w zakresie handlu P2P."
+                    data-en="We provide professional consulting in P2P trading."
+                    data-ru="Мы предоставляем профессиональные консультации по P2P-торговле.">Zapewniamy profesjonalne
+                    doradztwo w zakresie handlu P2P.</p>
+            </div>
+            <div class="service">
+                <img src="./images/Security.webp" alt="Security">
+                <h3 data-lang data-pl="Bezpieczeństwo" data-en="Security" data-ru="Безопасность">Bezpieczeństwo</h3>
+                <p data-lang data-pl="Gwarantujemy bezpieczne transakcje na naszej platformie."
+                    data-en="We guarantee secure transactions on our platform."
+                    data-ru="Мы гарантируем безопасные сделки на нашей платформе.">Gwarantujemy bezpieczne transakcje na
+                    naszej platformie.</p>
+            </div>
+            <div class="service">
+                <img src="./images/Support.webp" alt="Support">
+                <h3 data-lang data-pl="Wsparcie" data-en="Support" data-ru="Поддержка">Wsparcie</h3>
+                <p data-lang data-pl="Nasz zespół wsparcia jest dostępny 24/7, aby Ci pomóc."
+                    data-en="Our support team is available 24/7 to assist you."
+                    data-ru="Наша служба поддержки доступна 24/7, чтобы помочь вам.">Nasz zespół wsparcia jest dostępny
+                    24/7, aby Ci pomóc.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang data-pl="&copy; 2025 VERSA COMP. Wszystkie prawa zastrzeżone."
+            data-en="&copy; 2025 VERSA COMP. All rights reserved."
+            data-ru="&copy; 2025 VERSA COMP. Все права защищены.">
+            &copy; 2025 VERSA COMP. Wszystkie prawa zastrzeżone.
+        </p>
+    </footer>
+</body>
+
+</html>
